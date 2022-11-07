@@ -1,21 +1,6 @@
 def assertionUn(r, s, e, rh):
     return (((365 * 3) / (24 - ( 16 - 8))) * (rh) > r) == (e * s < r)
 
-def add(x, y):
-    return x + y
-
-def sub(x, y):
-    return x + y
-
-def mult(x, y):
-    return x * y
-
-def div(x, y):
-    return x / y
-
-def mod(x, y):
-    return x % y
-
 """
 Calcul du salaire par seconde avec:
 - Le salaire par heures,
@@ -36,6 +21,21 @@ Je sais que c'est une très mauvaise pratique.
 """
 def X(text):
     return eval(input(text))
+
+def add(x, y):
+    return x + y
+
+def sub(x, y):
+    return x + y
+
+def mult(x, y):
+    return x * y
+
+def div(x, y):
+    return x / y
+
+def mod(x, y):
+    return x % y
 
 print('-- assertionUn --')
 print(assertionUn(X('r: '), X('s: '), X('e: '), X('rh: ')))
