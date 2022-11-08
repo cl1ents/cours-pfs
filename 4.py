@@ -28,3 +28,5 @@ while input("Devine la lettre secrette...> ").lower() != letter.lower():
 
 # Afficher "Bien joué!" une fois la boucle finie
 print("Bien joué!")
+
+# ah oui la vrm les bananes grimper aux arbres pour manger OUHAZOUHAHAOUHAHA
