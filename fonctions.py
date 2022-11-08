@@ -8,19 +8,16 @@ Calcul du salaire par seconde avec:
 - Le nombre de jours ouvrables dans l'année
 """
 def salaireParSecondeSurUnAn(salaireParHeure, heureParJourOuvrable, joursOuvrables):
-    return (salaireParHeure * heureParJourOuvrable * joursOuvrables) / 31536000
+    #      (                     salaire Annuel                    ) / (Secondes/an)
+    return (salaireParHeure * heureParJourOuvrable * joursOuvrables) / (365*24*60*60)
 
 """
 Salaire NET d'un salaire BRUTE
 """
-def calculNet(salaireBrute):
-    return salaireBrute - (salaireBrute * .23)
-
-"""
-Je sais que c'est une très mauvaise pratique.
-"""
-def X(text):
-    return eval(input(text))
+def calculNet(salaireBrute, public):
+    # Si j'occupe un poste de la fonction publique (si public est vrai), alors pourcentage = 15%, sinon pourcentage = 23%
+    pourcentage = .15 if public else .23
+    return salaireBrute - (salaireBrute * pourcentage)
 
 def add(x, y):
     return x + y
@@ -36,6 +33,16 @@ def div(x, y):
 
 def mod(x, y):
     return x % y
+
+#-------------------------------------------#
+
+"""
+Je sais que c'est une très mauvaise pratique.
+"""
+def X(text):
+    return eval(input(text))
+
+#-------------------------------------------#
 
 print('-- assertionUn --')
 print(assertionUn(X('r: '), X('s: '), X('e: '), X('rh: ')))
