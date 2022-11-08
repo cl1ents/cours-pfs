@@ -56,6 +56,37 @@ def occurance2(list, val):
     # A la fin de la boucle, return ret
     return ret
 
-print(occurance1(liste, 1))
+"""
+Exercice 3:
+    Faire une fonction Afficher un message
+"""
+def msg(x):
+    print(f'[MESSAGE] {x}')
 
-# def indexTableau():
+"""
+Exercice 4:
+    Tel que
+"""
+users = {
+    "Alex": "mdp",
+    "evn": "pw",
+    "rayouyou": "12345",
+    "gwen": "azerty"
+}
+"""
+    Ecrire la fonction login(userName, password, userInfo) permettant d'afficher
+    un message de connextion si le combo user/ppw est bon
+"""
+def login(userName, password, userInfo):
+    # Trouver l'utilisateur
+    # Si userName n'est pas dans userInfo, userPassword sera vide
+    userPassword = userInfo.get(userName)
+
+    # Renvoyer l'égalité entre userPassword et password
+    # si le MDP est juste, alors True, sinon False
+    return userPassword == password
+
+if login(input('Username: '), input('Password: '), users):
+    print("Login sucessful!")
+else:
+    print("Login failed!")
