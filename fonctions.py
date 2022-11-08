@@ -17,6 +17,7 @@ Salaire NET d'un salaire BRUTE
 def calculNet(salaireBrute, public):
     # Si j'occupe un poste de la fonction publique (si public est vrai), alors pourcentage = 15%, sinon pourcentage = 23%
     pourcentage = .15 if public else .23
+    # return le salaire avec le pourcentage soustrait
     return salaireBrute - (salaireBrute * pourcentage)
 
 def add(x, y):
@@ -29,6 +30,13 @@ def mult(x, y):
     return x * y
 
 def div(x, y):
+    # Si Y est 0, la division est impossible
+    if y == 0:
+        # Alors afficher un message d'erreur
+        print("ERR: Can't divide by 0!")
+        # Et return rien
+        return 
+    # Sinon, continuer normalement
     return x / y
 
 def mod(x, y):
@@ -40,7 +48,10 @@ def mod(x, y):
 Je sais que c'est une très mauvaise pratique.
 """
 def X(text):
-    return eval(input(text))
+    i = input(text)
+    if i == "":
+        return 0
+    return eval(i)
 
 #-------------------------------------------#
 
@@ -51,7 +62,7 @@ print('-- salaireParSecondeSurUnAn --')
 print(salaireParSecondeSurUnAn(X('Le salaire par heures: '), X('Le nombre d\'heure par jours ouvrables: '), X('Le nombre de jours ouvrables dans l\'année: ')))
 
 print('-- calculNet --')
-print(calculNet(X('Le salaire NET: ')))
+print(calculNet(X('Le salaire NET: '), X('Fonction publique? (true/false): ')))
 
 print('-- add --')
 print(add(X('x: '), X('y: ')))
