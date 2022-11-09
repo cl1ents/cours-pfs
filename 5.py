@@ -16,8 +16,13 @@ fullName = firstName + " " + lastName + " #" + str(num)
 Exercice 1:
     Faire une fonction qui concatene 2 chaines de caractere, les séparants par une virgule
 """
-def concat(a, b):
-    return a + ", " + b
+def concat(chaineA, chaineB):
+    # Assurer qu'ils sont des str
+    # (Changer le type de a et de b en string)
+    stringifiedChaineA = str(chaineA)
+    stringifiedChaineB = str(chaineB)
+    # Retourner 
+    return stringifiedChaineA + ", " + stringifiedChaineB
 
 """
 Exercice 2:
@@ -27,34 +32,65 @@ Exercice 2:
     la fonction(tableau, 0) doit renvoyer "0, 4, 7" (use first func lol!)
 """
 def occurance1(list, val):
-    ret = ""
+    result = ""
 
     # Pour i prend toutes les valeurs entre 0 à la longueur de list - 1
     for i in range(len(list)):
         # Si l'element numero i est égal a val,
         if list[i] == val:
             # Alors concatener ret avec l'index
-            ret = concat(ret, str(i))
+            result = concat(result, str(i))
     
-    # A la fin de la boucle, return ret sans les deux premiers caracteres, donc enlever ", " au debut
-    return ret[2:]
+    # A la fin de la boucle, return result sans les deux premiers caracteres, donc enlever ", " au debut
+    return result[2:]
 # OU
 def occurance2(list, val):
-    ret = ""
+    # Definir result en tant que string vide
+    result = ""
 
     # Pour i prend toutes les valeurs entre 0 à la longueur de list - 1
     for i in range(len(list)):
         # Si l'element numero i est égal a val,
         if list[i] == val:
-            if ret == "": # Si ret est une chaine de caractere vide,
+            if result == "": # Si ret est une chaine de caractere vide,
                 # Alors le redefinir en tant que l'index trouvé
-                ret = str(i)
+                result = str(i)
             else: # Sinon,
                 # Concatener ret avec l'index
-                ret = concat(ret, str(i))
+                result = concat(result, i)
     
-    # A la fin de la boucle, return ret
-    return ret
+    # A la fin de la boucle, return result
+    return result
+# OU
+def occurance3(list, val):
+    # Initialiser i a 0
+    i = 0
+    # Initialiser isFirstFound a vrai
+    isFirstFound = True
+    # Definir chaineResultat en tant que 
+    chaineResultat = str()
+
+    # Tant que i est inferieur que la longueur de la liste
+    while i < len(list):
+        # Si l'élement d'index i dans la liste est égal a val
+        if list[i] == val:
+            # Alors
+
+            # Si isFirstFound est vrai
+            if isFirstFound:
+                # Alors on assigne chaineResultat a str(val)
+                chaineResultat = str(i)
+                # On assigne faux a isFirstFound
+                isFirstFound = False
+            else:
+                # Sinon on assigne chaineResultat le retour de concat(chaineResultat, str(i))
+                chaineResultat = concat(chaineResultat, str(i))
+        # On incremente i de 1
+        i += 1
+    # Renvoyer chaineResultat
+    return chaineResultat
+
+print(occurance3([0,1,1,1,0,1,1,0,1], 0))
 
 """
 Exercice 3:
