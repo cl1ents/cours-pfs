@@ -54,6 +54,7 @@
             # Afficher "YOU WIN!"
             # Mettre `playing` a False
 
-# Appeler la fonction `round` avec comme argument "fr" #FOR REEEEEEEAL
+# Definir une fonction `match` qui prend pour arguments une chaine de caractere `language` et un nombre entier `roundNumbers`
+    # Appeler la fonction `round` avec comme argument "fr" #FOR REEEEEEEAL
 
 # FIN
