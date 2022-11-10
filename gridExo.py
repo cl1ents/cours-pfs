@@ -107,7 +107,7 @@ def conwayTick(grid):
 
 ## SET THE SEED TO GET A "FIXED" GRID!
 # seed(1)
-grid = createGrid(100)
+grid = createGrid(80)
 
 """
 printGrid(grid)
