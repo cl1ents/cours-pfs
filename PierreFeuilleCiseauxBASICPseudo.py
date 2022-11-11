@@ -17,12 +17,11 @@
 
 # Pendant que playing est True:
     # Definir `actionBot` en tant que le retour de la fonction `random`
-    # Afficher "0 = Pierre, 1 = Feuille, 2 = Ciseaux"
-    # Definir `actionPlayer` en tant que le retour de la fonction `input` avec argument "> "
+    # Definir `actionPlayer` en tant que chaine de caractere vide
     # Tant que `actionPlayer` n'est pas un nombre entier ou que ce nombre n'est pas compris entre 0 et 2:
-        # Appeler la fonction `clear`
         # Afficher "0 = Pierre, 1 = Feuille, 2 = Ciseaux"
         # Redefinir `actionPlayer` en tant que le retour de la fonction `input` avec argument "> "
+        # Appeler la fonction `clear`
 
     # Pour `Output` prennant toutes les valeurs dans `nomActions` dans l'ordre:
         # Afficher `Output`

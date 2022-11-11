@@ -1,9 +1,15 @@
 # DEBUT
 
+from time import sleep
+
 # On admet une fonction `random` qui renvoie un chiffre entre 0 et 2
 from random import randint
 def random():
     return randint(0, 2)
+# On admet une fonction `clear` qui effact tout le texte affiché
+from os import system, name as osname
+def clear():
+    system('cls' if osname=='nt' else 'clear')
 
 # On admet une fonction `input` avec un argument `Text`:
     # Afficher la valeur de `Text`
@@ -30,16 +36,25 @@ playing = True
 while playing:
     # Definir `actionBot` en tant que le retour de la fonction `random`
     actionBot = random()
-    # Afficher "0 = Pierre, 1 = Feuille, 2 = Ciseaux"
-    print("\n0 = Pierre, 1 = Feuille, 2 = Ciseaux")
-    # Definir `actionPlayer` en tant que le retour de la fonction `input` avec argument "> "
-    actionPlayer = input("> ")
+    # Definir `actionPlayer` en tant que chaine de caractere vide
+    actionPlayer = ''
     # Tant que `actionPlayer` n'est pas un nombre nombre entier ou que ce nombre n'est pas compris entre 0 et 2:
     while (not checkInt(actionPlayer)) or int(actionPlayer) < 0 or int(actionPlayer) > 2:
+        # Afficher "0 = Pierre, 1 = Feuille, 2 = Ciseaux"
+        print("\n0 = Pierre, 1 = Feuille, 2 = Ciseaux")
         # Redefinir `actionPlayer` en tant que le retour de la fonction `input` avec argument "> "
         actionPlayer = input("> ")
+        # Appeler la fonction `clear`
+        clear()
     
     intActionPlayer = int(actionPlayer)
+
+    # Pour `Output` prennant toutes les valeurs dans `nomActions` dans l'ordre:
+    for Output in nomActions:
+        # Afficher `Output`
+        print(Output)
+        # Attendre 0.3 secondes
+        sleep(.3)
 
     # Definir `Output` en tant que la concatenation de ces chaines de caractères:
      # "BOT: ", l'élement `nomActions` d'index `actionBot`, ", PLAYER: ", et enfin l'élement `nomActions` d'index `actionPlayer`
