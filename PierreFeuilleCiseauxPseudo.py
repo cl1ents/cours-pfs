@@ -112,12 +112,3 @@
 
 
 # FIN
-
-"""
-TODO:
-- Finsh match system
-- Add menu before starting for settings
-- MAYBE clickable console stuff
-- Add Player VS Player system
-- Change the player input system into a function (so I can use it twice without redundancy)
-"""
