@@ -21,6 +21,10 @@
     # Tant que `actionPlayer` n'est pas un nombre entier ou que ce nombre n'est pas compris entre 0 et 2:
         # Redefinir `actionPlayer` en tant que le retour de la fonction `input` avec argument "> "
 
+    # Pour `Output` prennant toutes les valeurs dans `nomActions` dans l'ordre:
+        # Afficher `Output`
+        # Attendre 0.3 secondes
+
     # Definir `Output` en tant que la concatenation de ces chaines de caractères:
      # "BOT: ", l'élement `nomActions` d'index `actionBot`, ", PLAYER: ", et enfin l'élement `nomActions` d'index `actionPlayer`
     # Afficher `Output`
