@@ -28,7 +28,7 @@
         # Attendre 0.3 secondes
 
     # Definir `Output` en tant que la concatenation de ces chaines de caractères:
-     # "BOT: ", l'élement `nomActions` d'index `actionBot`, ", PLAYER: ", et enfin l'élement `nomActions` d'index `actionPlayer`
+     # "BOT: ", l'élement dans `nomActions` d'index `actionBot`, ", PLAYER: ", et enfin l'élement dans `nomActions` d'index `actionPlayer`
     # Afficher `Output`
 
     ### EN RETENANT QUE Pierre EST 0, Feuille EST 1 ET Ciseaux EST 2
