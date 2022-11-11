@@ -1,6 +1,7 @@
 # DEBUT
 
 # On admet une fonction `random` qui renvoie un chiffre entre 0 et 2
+# On admet une fonction `clear` qui effact tout le texte affiché
 # On admet une fonction `input` avec un argument `Text`:
     # Afficher la valeur de `Text`
     # Attendre que l'utilisateur entre une chaine de caractère, puis la renvoyer
@@ -19,6 +20,8 @@
     # Afficher "0 = Pierre, 1 = Feuille, 2 = Ciseaux"
     # Definir `actionPlayer` en tant que le retour de la fonction `input` avec argument "> "
     # Tant que `actionPlayer` n'est pas un nombre entier ou que ce nombre n'est pas compris entre 0 et 2:
+        # Appeler la fonction `clear`
+        # Afficher "0 = Pierre, 1 = Feuille, 2 = Ciseaux"
         # Redefinir `actionPlayer` en tant que le retour de la fonction `input` avec argument "> "
 
     # Pour `Output` prennant toutes les valeurs dans `nomActions` dans l'ordre:
