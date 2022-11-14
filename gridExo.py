@@ -1,11 +1,6 @@
-# DEBUT
-
 from random import randint, seed
 from time import sleep
 import os
-
-def cls():
-    os.system('cls' if os.name=='nt' else 'clear')
 
 
 ## INITIAL VALUES
@@ -24,6 +19,12 @@ directions = [
 ]
 
 ## FUNCTIONS
+
+"""
+Clears console
+"""
+def cls():
+    os.system('cls' if os.name=='nt' else 'clear')
 
 """
 Creates grid of X by X
@@ -119,5 +120,3 @@ while True:
     printGrid(grid)
     grid = conwayTick(grid)
     sleep(.2)
-
-# FIN

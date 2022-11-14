@@ -60,8 +60,10 @@ def round(language):
         actionPlayer = ''
         # Tant que `actionPlayer` n'est pas un nombre nombre entier ou que ce nombre n'est pas compris entre 0 et 2:
         while (not checkInt(actionPlayer)) or int(actionPlayer) < 0 or int(actionPlayer) > 2:
-            # Afficher "0 = Pierre, 1 = Feuille, 2 = Ciseaux"
-            print("\n0 = Pierre, 1 = Feuille, 2 = Ciseaux")
+            # Definir `Output` en tant que la concatenation de ces chaines de caractères:
+               # "0 = ", l'élement dans `nomActions` d'index 0, ", 1 = ",  l'élement dans `nomActions` d'index 1, ", 2 = ", et enfin l'élement `nomActions` d'index 2
+            # Afficher `Output
+            print("\n0 = "+ nomActions[0] +", 1 = "+ nomActions[1] +", 2 = "+ nomActions[2])
             # Redefinir `actionPlayer` en tant que le retour de la fonction `input` avec argument "> "
             actionPlayer = input("> ")
             # Appeler la fonction `clear`
